@@ -1,0 +1,56 @@
+package com.muddlemail.MuddleClient.models;
+
+import java.security.PrivateKey;
+
+public class Session {
+///////////////////////////////////////////////////////////////////////////////
+// Class Variables ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////	
+	private static final Session instance = new Session();
+	private static PrivateKey userPrivateKey = null;
+
+///////////////////////////////////////////////////////////////////////////////
+// Constructors ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+    /**
+     * Singleton protection... use getInstance().
+     */
+    private Session() {
+    
+    }
+
+///////////////////////////////////////////////////////////////////////////////
+// Methods ////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////// 
+    /**
+     * This class is a singleton. You know what to do from here.
+     *
+     * @return instance-of-this-singleton
+     */
+    public static Session getInstance() {
+        return instance;
+    }
+    
+    /**
+     * 
+     * @return
+     */
+    public static PrivateKey getUserPrivateKey() {
+    	return userPrivateKey;
+    }
+    
+    /**
+     * 
+     * @param privKey
+     */
+    public static void setUserPrivateKey(PrivateKey privKey) {
+    	userPrivateKey = privKey;
+    }
+    
+    /**
+     * 
+     */
+    public static void clearUserPrivateKey() {
+    	userPrivateKey = null;
+    }
+}

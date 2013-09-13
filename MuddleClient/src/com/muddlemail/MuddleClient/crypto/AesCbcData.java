@@ -1,0 +1,58 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.muddlemail.MuddleClient.crypto;
+
+import javax.crypto.SecretKey;
+
+/**
+ *
+ * @author matt
+ */
+public class AesCbcData {
+///////////////////////////////////////////////////////////////////////////////
+// Class Variables ////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+    protected byte[] cipherData;
+    protected byte[] iv;
+    
+///////////////////////////////////////////////////////////////////////////////
+// Constructors ///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+    public AesCbcData(byte[] cipherData, byte[] iv) {
+        this.cipherData = cipherData;
+        this.iv = iv;
+    }
+    
+    /**
+     * This constructor will also gold a key.  Be care
+     * @param cipherData
+     * @param iv
+     * @param key
+     */
+    public AesCbcData(byte[] cipherData, byte[] iv, SecretKey key) {
+        this.cipherData = cipherData;
+        this.iv = iv;
+    }
+    
+    
+///////////////////////////////////////////////////////////////////////////////
+// Methods ////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////    
+    /**
+     * 
+     * @return
+     */
+    public byte[] getCipherData() {
+        return cipherData;
+    }
+    
+    /**
+     * 
+     * @return
+     */
+    public byte[] getIv() {
+        return iv;
+    }
+}
