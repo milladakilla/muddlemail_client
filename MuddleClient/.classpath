@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="lib/httpmime-4.2.5.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.2.4.jar" sourcepath="lib-src/gson-2.2.4-sources.jar"/>
 	<classpathentry kind="lib" path="lib/hsqldb-2.3.jar" sourcepath="lib-src/hsqldb-2.3-src.zip"/>
+	<classpathentry kind="lib" path="lib/bcprov-jdk15on-149.jar" sourcepath="lib-src/bcprov-jdk15on-149-src.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
