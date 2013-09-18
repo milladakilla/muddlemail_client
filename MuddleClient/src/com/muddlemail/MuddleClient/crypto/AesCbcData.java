@@ -4,7 +4,6 @@
  */
 package com.muddlemail.MuddleClient.crypto;
 
-import javax.crypto.SecretKey;
 
 /**
  *
@@ -14,28 +13,16 @@ public class AesCbcData {
 ///////////////////////////////////////////////////////////////////////////////
 // Class Variables ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-    protected byte[] cipherData;
+    protected byte[] dataCipher;
     protected byte[] iv;
     
 ///////////////////////////////////////////////////////////////////////////////
 // Constructors ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
     public AesCbcData(byte[] cipherData, byte[] iv) {
-        this.cipherData = cipherData;
+        this.dataCipher = cipherData;
         this.iv = iv;
     }
-    
-    /**
-     * This constructor will also gold a key.  Be care
-     * @param cipherData
-     * @param iv
-     * @param key
-     */
-    public AesCbcData(byte[] cipherData, byte[] iv, SecretKey key) {
-        this.cipherData = cipherData;
-        this.iv = iv;
-    }
-    
     
 ///////////////////////////////////////////////////////////////////////////////
 // Methods ////////////////////////////////////////////////////////////////////
@@ -44,8 +31,8 @@ public class AesCbcData {
      * 
      * @return
      */
-    public byte[] getCipherData() {
-        return cipherData;
+    public byte[] getDataCipher() {
+        return dataCipher;
     }
     
     /**

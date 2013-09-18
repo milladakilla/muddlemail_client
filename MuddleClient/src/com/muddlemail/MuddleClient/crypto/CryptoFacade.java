@@ -392,7 +392,7 @@ public class CryptoFacade {
             cipher = Cipher.getInstance(CIPHER_SYMMETRIC_ALGO_LONG);
             cipher.init(Cipher.DECRYPT_MODE, key,
                     new IvParameterSpec(cipherData.getIv()));
-            plainData = cipher.doFinal(cipherData.getCipherData());
+            plainData = cipher.doFinal(cipherData.getDataCipher());
 
         } catch (InvalidAlgorithmParameterException ex) {
             throw new FailedToDecryptException(ex);
