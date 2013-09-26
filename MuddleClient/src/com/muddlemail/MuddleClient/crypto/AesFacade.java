@@ -60,7 +60,9 @@ public class AesFacade {
 	 * @return AesCbcData - holds both the cipherData and the I.V.
 	 * @throws FailedToEncryptException 
 	 */
-	public static AesCbcData encryptData(byte[] dataPlain, byte[] keyAes) throws FailedToEncryptException {
+	public static AesCbcData encryptData(byte[] dataPlain, byte[] keyAes) 
+	throws FailedToEncryptException 
+	{
 		Cipher cipherAes = null;
 		byte[] dataCipher = null;
 
